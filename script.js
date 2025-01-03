@@ -114,11 +114,10 @@ if (/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
         const input = document.createElement('input');
         input.style.position = 'absolute';
         input.style.opacity = 0;
+        input.style.height = 0;
+        input.style.width = 0;
+        input.style.border = 'none';
         document.body.appendChild(input);
         input.focus();
-        setTimeout(() => {
-            input.blur();
-            document.body.removeChild(input);
-        }, 1000);
     });
 }
