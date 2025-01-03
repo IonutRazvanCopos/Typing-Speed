@@ -108,3 +108,17 @@ function updateWrongWords() {
         resetButton.onclick = () => location.reload();
     }
 }
+
+if (/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+    window.addEventListener('load', () => {
+        const input = document.createElement('input');
+        input.style.position = 'absolute';
+        input.style.opacity = 0;
+        document.body.appendChild(input);
+        input.focus();
+        setTimeout(() => {
+            input.blur();
+            document.body.removeChild(input);
+        }, 1000);
+    });
+}
