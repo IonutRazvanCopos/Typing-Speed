@@ -2,6 +2,7 @@ const startButton = document.getElementById("startBtn");
 const timer = document.getElementById('time');
 const text = document.getElementById('text');
 const resetButton = document.getElementById('resetBtn');
+const oneSec = 1000, min = 60;
 
 const getRandomText = () => {
     const { words } = textList[Math.floor(Math.random() * textList.length)];
@@ -11,7 +12,7 @@ const getRandomText = () => {
 let newText = document.getElementById('myText');
 let newTextArray = newText.innerHTML.split('');
 let testFinished = false;
-let seconds = 60, min = 60, oneSec = 1000;
+let seconds = 60;
 let index = 0, indexNewText = 0;
 let wrongWords = 0;
 let result = document.createElement('div');
