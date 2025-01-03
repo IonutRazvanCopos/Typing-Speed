@@ -31,18 +31,6 @@ function startTypingTest() {
     startButton.style.cursor = 'auto';
     document.addEventListener('keypress', checkLetters);
     newText.style.display = 'block';
-    if (/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-    window.addEventListener('load', () => {
-        const input = document.createElement('input');
-        input.style.position = 'absolute';
-        input.style.opacity = 0;
-        input.style.height = 0;
-        input.style.width = 0;
-        input.style.border = 'none';
-        document.body.appendChild(input);
-        input.focus();
-    });
-}
 }
 
 function countdown() {
